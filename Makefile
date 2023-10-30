@@ -8,7 +8,7 @@ ALL:=$(BINARIES)
 
 .PHONY: all
 all: $(ALL)
-	$(info doing [$@])
+	@true
 
 # rules
 $(BINARIES): %.elf: %.o
