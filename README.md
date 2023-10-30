@@ -8,7 +8,7 @@ website: https://veltzer.github.io/demos-nasm
 
 ## build
 
-
+![build](https://github.com/veltzer/demos-nasm/workflows/build/badge.svg)
 
 Examples for the NASM assembler
 
