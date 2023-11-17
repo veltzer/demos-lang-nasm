@@ -37,7 +37,7 @@ all: $(ALL)
 	@true
 
 # rules
-$(BINARIES): out/%.elf: %.o
+$(BINARIES): out/%.elf: out/%.o
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)ld -o $@ $<
