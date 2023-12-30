@@ -18,7 +18,7 @@ chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gi
 
 ## number of examples 
 
-Currently there are 4 examples in this repo.
+Currently there are 5 examples in this repo.
 
 # How to run examples from this repository?
 
