@@ -25,4 +25,4 @@ Currently there are 5 examples in this repo.
 	$ make
 	$ ./src/hello_world.elf
 
-Mark Veltzer, Copyright © 2023
+Mark Veltzer, Copyright © 2023, 2024
