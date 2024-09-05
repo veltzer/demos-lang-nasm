@@ -20,6 +20,8 @@ chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gi
 
 Currently there are 5 examples in this repo.
 
+Currently there are 1 exercises in this repo.
+
 # How to run examples from this repository?
 
 	$ make

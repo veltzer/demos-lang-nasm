@@ -1,6 +1,6 @@
 packages=[
     "nasm",
-    "yasm",
-    "sasm",
-    "fasm",
+    # "yasm",
+    # "sasm",
+    # "fasm",
 ]
