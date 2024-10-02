@@ -2,12 +2,13 @@
 # parameters #
 ##############
 # do you want to show the commands executed ?
-DO_MKDBG?=0
+DO_MKDBG:=0
+# do you want dependency on the Makefile itself ?
+DO_ALLDEP:=1
 
-
-#############
-# variables #
-#############
+########
+# code #
+########
 SYSTEM_ARCH:=$(shell arch)
 #ARCH:=elf32
 ARCH:=elf64
@@ -16,10 +17,6 @@ OBJECTS=$(addprefix out/, $(addsuffix .o,$(basename $(SOURCES))))
 BINARIES=$(addprefix out/, $(addsuffix .elf,$(basename $(SOURCES))))
 ALL:=$(BINARIES)
 
-
-########
-# code #
-########
 # silent stuff
 ifeq ($(DO_MKDBG),1)
 Q:=
@@ -60,3 +57,10 @@ debug:
 	$(info SYSTEM_ARCH is $(SYSTEM_ARCH))
 	$(info ARCH is $(ARCH))
 	$(info ALL is $(ALL))
+
+##########
+# alldep #
+##########
+ifeq ($(DO_ALLDEP),1)
+.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
+endif # DO_ALLDEP
