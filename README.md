@@ -27,4 +27,4 @@ Currently there are 3 exercises in this repo.
 	$ make
 	$ ./src/hello_world.elf
 
-Mark Veltzer, Copyright © 2023, 2024
+Mark Veltzer, Copyright © 2023, 2024, 2025
