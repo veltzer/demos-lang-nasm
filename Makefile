@@ -49,6 +49,11 @@ clean:
 	$(info doing [$@])
 	$(Q)-rm -f $(ALL) hello.o
 
+.PHONY: clean_hard
+clean_hard:
+	$(info doing [$@])
+	$(Q)git clean -qffxd
+
 .PHONY: debug
 debug:
 	$(info SOURCES is $(SOURCES))
