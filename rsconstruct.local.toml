@@ -8,7 +8,10 @@ src_dirs = ["tera.templates"]
 # The Makefile assembled each src/**/*.asm with nasm (-f elf64) and linked it
 # with ld, writing out/<dir>/<name>.o and .elf. rsconstruct runs the same two
 # steps through a wrapper (nasm's assemble-then-ld is not a one-shot compile).
-[processor.explicit.nasm]
+[processor.generator.nasm]
 command = "scripts/nasm_link.py"
 src_dirs = ["src"]
 src_extensions = [".asm"]
+output_dir = "out"
+output_extension = "elf"
+batch = false
