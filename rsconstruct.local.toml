@@ -15,3 +15,9 @@ src_extensions = [".asm"]
 output_dir = "out"
 output_extension = "elf"
 batch = false
+
+# nasm assembles the demos.
+[dependencies]
+system = [
+    "nasm",
+]
