@@ -7,6 +7,6 @@ Currently there are {{ git_count_files(pattern="src/exercises/*.asm") }} exercis
 ## How to run examples from this repository?
 
 ```console
-$ make
-$ ./src/hello_world.elf
+make
+./src/hello_world.elf
 ```

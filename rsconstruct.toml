@@ -26,6 +26,7 @@ src_dirs = ["tera.templates"]
 
 [processor.rumdl]
 src_dirs = ["src"]
+src_files = ["README.md"]
 
 [processor.zspell]
 src_dirs = ["src"]
