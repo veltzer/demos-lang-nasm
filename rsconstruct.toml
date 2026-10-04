@@ -18,7 +18,7 @@ reject_dot_src_dirs = true
 # listed here must exist: rsconstruct rejects a missing one at config load.
 # Repos still on config/*.py keep a dep_inputs override in their local
 # overlay until converted.
-[processor.tera]
+[processor.generator.tera]
 dep_auto = [
 	"config/project.lua",
 	"config/personal.lua",
@@ -28,34 +28,34 @@ src_dirs = ["tera.templates"]
 
 # ─── markdown ────────────────────────────────────────────────────────────────
 
-[processor.rumdl]
+[processor.checker.rumdl]
 src_dirs = ["src"]
 src_files = ["README.md"]
 
-[processor.zspell]
+[processor.checker.zspell]
 src_dirs = ["src"]
 
 # ─── python ──────────────────────────────────────────────────────────────────
 
-[processor.ruff]
+[processor.checker.ruff]
 src_dirs = ["src", "scripts", "config"]
 
 
-[processor.mypy]
+[processor.checker.mypy]
 src_dirs = ["src", "scripts", "config"]
 
-[processor.luacheck]
+[processor.checker.luacheck]
 src_dirs = ["config"]
 
 # ─── toml / yaml / json ──────────────────────────────────────────────────────
 
-[processor.taplo]
+[processor.checker.taplo]
 src_files = [".rumdl.toml", "pyproject.toml", "rsconstruct.toml"]
 
 # The Makefile assembled each src/**/*.asm with nasm (-f elf64) and linked it
 # with ld, writing out/<dir>/<name>.o and .elf. rsconstruct runs the same two
 # steps through a wrapper (nasm's assemble-then-ld is not a one-shot compile).
-[processor.generator.nasm]
+[processor.generator.generic.nasm]
 command = "scripts/nasm_link.py"
 src_dirs = ["src"]
 src_extensions = [".asm"]
@@ -70,5 +70,5 @@ system = [
 ]
 
 # lint the GitHub Actions workflow files with actionlint
-[processor.actionlint]
+[processor.checker.actionlint]
 src_dirs = [".github/workflows"]
