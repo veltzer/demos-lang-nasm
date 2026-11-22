@@ -5,7 +5,7 @@
 
 description: Examples for the NASM assembler
 
-project website: https://veltzer.github.io/demos-lang-nasm
+project website: <https://veltzer.github.io/demos-lang-nasm>
 
 author: Mark Veltzer
 
