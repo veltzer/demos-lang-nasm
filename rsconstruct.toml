@@ -41,7 +41,7 @@ src_dirs = ["config"]
 # ─── toml / yaml / json ──────────────────────────────────────────────────────
 
 [processor.checker.taplo]
-src_files = [".rumdl.toml", "pyproject.toml", "rsconstruct.toml"]
+src_files = [".ruff.toml", ".rumdl.toml", "pyproject.toml", "rsconstruct.toml"]
 
 # The Makefile assembled each src/**/*.asm with nasm (-f elf64) and linked it
 # with ld, writing out/<dir>/<name>.o and .elf. rsconstruct runs the same two
